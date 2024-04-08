@@ -35,11 +35,11 @@ Before installing pynput, make sure you have the following prerequisites:
 
 ### Code Modification
 
-Before running the code, a slight modification is required:
+Before running the code, access to two gmail accounts and a slight modification is required:
 
-* line 57: Enter any gmail in place of "Put any email here".
-* Line 58: Enter the gmail you desire to receive the log.txt file on in place of "Put your email here and its App Password below".
-* Line 90: Enter the App Password to the gmail you chose for line 58. You obtain the App Password by visiting `https://myaccount.google.com/` and signing in with the same gmail account.
+* line 57: Enter your gmail in place of "Put any email here".
+* Line 58: Enter another gmail, the one you desire to receive the log.txt file on in place of "Put your email here and its App Password below".
+* Line 90: Enter the App Password to the gmail you chose for line 57. You obtain the App Password by visiting `https://myaccount.google.com/` and signing in with the same gmail account.
 * In the search bar, write `"App Passwords"`, enter your password again, and obtain the 16 letter password with 3 spaces in between. *keep the spaces when entering the password*.
 
 Run the keylogger by typing `python LinuxKeylogger.py` in a command prompt in the file's directory.
