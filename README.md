@@ -37,7 +37,7 @@ Before running the code, access to at least one gmail account is required:
 
 You obtain the App Password by visiting `https://myaccount.google.com/` and signing in with the same gmail account. In the search bar, write `"App Passwords"`, enter your password again, and obtain the 16 letter password with 3 spaces in between. *keep the spaces when entering the password*.
 
-Run the keylogger by typing `python Keylogger-to-Gmail.py` in a command prompt in the file's directory. A prompt pops up asking you to input sender email, receiver email, and a password.
+Run the keylogger by typing `python Keylogger-to-Gmail.py` in a command prompt in the file's directory with the -s, -r, and -p arguments: sender email, receiver email, and a password.
 
 * Enter in sender email the Gmail you used to obtain the App Password.
 * Enter in receiver email the Gmail you desire to receive the logs on (it can be the same as the sender email).
