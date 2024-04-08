@@ -33,16 +33,15 @@ Before installing pynput, make sure you have the following prerequisites:
 
 ## Running the Codes
 
-### Code Modification
+Before running the code, access to at least one gmail account is required:
 
-Before running the code, access to two gmail accounts and a slight modification is required:
+You obtain the App Password by visiting `https://myaccount.google.com/` and signing in with the same gmail account. In the search bar, write `"App Passwords"`, enter your password again, and obtain the 16 letter password with 3 spaces in between. *keep the spaces when entering the password*.
 
-* line 57: Enter your gmail in place of "Put any email here".
-* Line 58: Enter another gmail, the one you desire to receive the log.txt file on in place of "Put your email here and its App Password below".
-* Line 90: Enter the App Password to the gmail you chose for line 57. You obtain the App Password by visiting `https://myaccount.google.com/` and signing in with the same gmail account.
-* In the search bar, write `"App Passwords"`, enter your password again, and obtain the 16 letter password with 3 spaces in between. *keep the spaces when entering the password*.
+Run the keylogger by typing `python Keylogger-to-Gmail.py` in a command prompt in the file's directory. A prompt pops up asking you to input sender email, receiver email, and a password.
 
-Run the keylogger by typing `python LinuxKeylogger.py` in a command prompt in the file's directory.
+* Enter in sender email the Gmail you used to obtain the App Password.
+* Enter in receiver email the Gmail you desire to receive the logs on (it can be the same as the sender email).
+* Enter the App Password.
 
 ## Description
 * The keylogger creates a log.txt file in its directory when run.
