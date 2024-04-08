@@ -9,6 +9,7 @@ This README provides instructions on how to run the Keylogger.
   - [Installation](#installation)
     - [Prerequisites](#prerequisites)
     - [Installation Steps](#installation-steps)
+    - [Code Modification](#code-modification)
   - [Running the Codes](#running-the-codes)
   - [Description](#Description)
 
@@ -24,7 +25,7 @@ Before installing pynput, make sure you have the following prerequisites:
 
 ### Installation Steps
 
-1. Through your terminal or command prompt, install pynput using pip by running the following command: `pip3 install scapy`. This will download and install pynput and its dependencies.
+1. Through your terminal or command prompt, install pynput using pip by running the following command: `pip3 install pynput`. This will download and install pynput and its dependencies.
 
 
 2. You can clone both codes, once the installation is complete, using the command: git clone https://github.com/HadiElNawfal/Keylogger
@@ -41,7 +42,7 @@ Before running the code, a slight modification is required:
 * Line 90: Enter the App Password to the gmail you chose for line 58. You obtain the App Password by visiting `https://myaccount.google.com/` and signing in with the same gmail account.
 * In the search bar, write `"App Passwords"`, enter your password again, and obtain the 16 letter password with 3 spaces in between. *keep the spaces when entering the password*.
 
-Run the keylogger by typing `python Server.py` in a command prompt in the file's directory.
+Run the keylogger by typing `python LinuxKeylogger.py` in a command prompt in the file's directory.
 
 ## Description
 * The keylogger creates a log.txt file in its directory when run.
