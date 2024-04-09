@@ -22,7 +22,7 @@ def header():
            |___/         |___/ |___/                                                            
 
            
-            by Hadi El Nawfal\n""", 'light_magenta')
+            by Hadi El Nawfal""", 'light_magenta')
 
 header()
 
