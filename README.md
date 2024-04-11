@@ -46,7 +46,7 @@ Run the keylogger by typing `python Keylogger-to-Gmail.py` in a command prompt i
 ## Description
 * The keylogger creates a log.txt file in its directory when run.
 * It stores all keystrokes in the log file except alt, ctrl, backspace, etc. This is to avoid cluttering the log.txt file up.
-* Every 2 minutes, an email with log.txt attachement is sent to the email you specified in the code earlier.
+* Every 2 minutes, an email with log.txt attachment is sent to the email you specified in the code earlier.
 
 
 
