@@ -10,7 +10,6 @@ This README provides instructions on how to run the Keylogger.
     - [Prerequisites](#prerequisites)
     - [Installation Steps](#installation-steps)
   - [Running the Codes](#running-the-codes)
-    - [Code Modification](#code-modification)
   - [Description](#Description)
 
 ## Installation
