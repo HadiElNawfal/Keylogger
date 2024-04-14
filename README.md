@@ -27,7 +27,7 @@ Before installing pynput, make sure you have the following prerequisites:
 1. Through your terminal or command prompt, install pynput using pip by running the following command: `pip3 install pynput`. This will download and install pynput and its dependencies.
 
 
-2. You can clone both codes, once the installation is complete, using the command: git clone https://github.com/HadiElNawfal/Keylogger
+2. You can clone the code, once the installation is complete, using the command: git clone https://github.com/HadiElNawfal/Keylogger
 
 
 ## Running the Codes
