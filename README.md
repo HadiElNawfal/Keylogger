@@ -11,6 +11,7 @@ This README provides instructions on how to run the Keylogger.
     - [Installation Steps](#installation-steps)
   - [Running the Codes](#running-the-codes)
   - [Description](#Description)
+  - [Sample Output](#Sample-Output)
 
 ## Installation
 
@@ -52,6 +53,23 @@ Run the keylogger by typing `python Keylogger-to-Gmail.py` in a command prompt i
 * It stores all keystrokes in the log file except alt, ctrl, backspace, etc. This is to avoid cluttering the log.txt file up.
 * Every 2 minutes, an email with log.txt attachment is sent to the email you specified in the code earlier.
 
+## Sample Output
+```
+\
+  _  __          _                                    _               _____                 _ _ 
+ | |/ /         | |                                  | |             / ____|               (_) |
+ | ' / ___ _   _| | ___   __ _  __ _  ___ _ __ ______| |_ ___ ______| |  __ _ __ ___   __ _ _| |
+ |  < / _ \ | | | |/ _ \ / _` |/ _` |/ _ \ '__|______| __/ _ \______| | |_ | '_ ` _ \ / _` | | |
+ | . \  __/ |_| | | (_) | (_| | (_| |  __/ |         | || (_) |     | |__| | | | | | | (_| | | |
+ |_|\_\___|\__, |_|\___/ \__, |\__, |\___|_|          \__\___/       \_____|_| |_| |_|\__,_|_|_|
+            __/ |         __/ | __/ |
+           |___/         |___/ |___/
+
+
+            by Hadi El Nawfal
+Email with attachment sent successfully
+```
+![Email](image/email.png "This shows the email received")
 
 
 
