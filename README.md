@@ -69,7 +69,7 @@ Run the keylogger by typing `python Keylogger-to-Gmail.py` in a command prompt i
             by Hadi El Nawfal
 Email with attachment sent successfully
 ```
-![Email](image/email.png "This shows the email received")
+![Email](email.png "This shows the email received")
 
 
 
