@@ -26,7 +26,7 @@ Before installing pynput, make sure you have the following prerequisites:
 
 1. Through your terminal or command prompt, install pynput using pip by running the following command:
 ```
-pip install pynput`.
+pip install pynput
 ```
 This will download and install pynput and its dependencies.
 
