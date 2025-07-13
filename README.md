@@ -55,11 +55,11 @@ Run the keylogger by typing `python Keylogger-to-Gmail.py` in a command prompt i
 * Every 2 minutes, an email with log.txt attachment is sent to the email you specified in the code earlier.
 
 ## Limitations
-1. No Persistence
+1. No Persistence:
 The script does not persist across reboots.
-2. No Encryption
+2. No Encryption:
 Password is passed via command-line arguments (--password) in plaintext and is visible to Process monitors (ps, Task Manager) and Shell history files.
-3. No Self-Destruction or Obfuscation
+3. No Self-Destruction or Obfuscation:
 The file remains on disk and can be easily discovered.
 
 ## Sample Output
