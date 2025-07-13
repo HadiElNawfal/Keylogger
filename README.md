@@ -11,6 +11,7 @@ This README provides instructions on how to run the Keylogger.
     - [Installation Steps](#installation-steps)
   - [Running the Codes](#running-the-codes)
   - [Description](#Description)
+  - [Limitations](#limitations)
   - [Sample Output](#Sample-Output)
 
 ## Installation
@@ -52,6 +53,14 @@ Run the keylogger by typing `python Keylogger-to-Gmail.py` in a command prompt i
 * The keylogger creates a log.txt file in its directory when run.
 * It stores all keystrokes in the log file except alt, ctrl, backspace, etc. This is to avoid cluttering the log.txt file up.
 * Every 2 minutes, an email with log.txt attachment is sent to the email you specified in the code earlier.
+
+## Limitations
+1. No Persistence
+The script does not persist across reboots.
+2. No Encryption
+Password is passed via command-line arguments (--password) in plaintext and is visible to Process monitors (ps, Task Manager) and Shell history files.
+3. No Self-Destruction or Obfuscation
+The file remains on disk and can be easily discovered.
 
 ## Sample Output
 ```
